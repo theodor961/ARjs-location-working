@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ar Quiz</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#options {
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+#result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+</style>
+
+
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
+<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+
+</head>
+<body>
+<script>
+function startQuiz(box) {
+  alert('ola');
+}
+</script>
+
+
+  
+<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+
+
+      <a-assets>
+        <a-asset-item id="questionblue" src="Yanez Designs_question_mark_block_super_mario_bros/sceneblue.gltf"></a-asset-item>
+        <a-asset-item id="questionred" src="Yanez Designs_question_mark_block_super_mario_bros/scenered.gltf"></a-asset-item>
+        <a-asset-item id="questiongreen" src="Yanez Designs_question_mark_block_super_mario_bros/scenegreen.gltf"></a-asset-item>
+        <a-asset-item id="questionwhite" src="Yanez Designs_question_mark_block_super_mario_bros/scenewhite.gltf"></a-asset-item>
+        <a-asset-item id="questioncyan" src="Yanez Designs_question_mark_block_super_mario_bros/scenecyan.gltf"></a-asset-item>
+        <a-asset-item id="questionpink" src="Yanez Designs_question_mark_block_super_mario_bros/scenepink.gltf"></a-asset-item>
+        <a-asset-item id="questionyellow" src="Yanez Designs_question_mark_block_super_mario_bros/sceneyellow.gltf"></a-asset-item>
+      </a-assets>
+
+
+    <a-camera gps-new-camera='gpsMinDistance: 1 ; simulateLatitude: 38.73703550798876 ; simulateLongitude: -9.231627642397234 ' look-controls="enabled: false" arjs-device-orientation-controls='smoothingFactor: 0.1' cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
+    <a-entity  gps-new-entity-place="latitude: 38.77264560051591; longitude:-9.161864799714833" position="0 10 0" >
+        <a-gltf-model id="box1" onclick="startQuiz('box1');" class="clickable"  rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#questionblue"></a-gltf-model>
+	</a-entity>
+    <a-entity  gps-new-entity-place="latitude: 38.77264560051591; longitude:-9.161864799714833" position="0 10 0" >
+        <a-gltf-model id="box2" onclick="startQuiz('box2');" class="clickable"  rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#questionblue"></a-gltf-model>
+	</a-entity>
+    <a-entity  gps-new-entity-place="latitude: 38.77232028913662; longitude:-9.16170513339774" position="0 10 0" >
+        <a-gltf-model id="box3" onclick="startQuiz('box3');" class="clickable"  rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#questiongreen"></a-gltf-model>
+	</a-entity>
+    <a-entity   gps-new-entity-place="latitude: 38.77217091133031; longitude:-9.16150501993348" position="0 10 0" >
+        <a-gltf-model id="box4" onclick="startQuiz('box4');" class="clickable"  rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#questionred"></a-gltf-model>
+	</a-entity>
+
+
+    <a-entity  gps-new-entity-place="latitude: 38.793944394630; longitude:-9.420329858738274" position="0 10 0" >
+        <a-gltf-model id="box11" onclick="startQuiz('box11');" class="clickable"  rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#questionblue"></a-gltf-model>
+	</a-entity>
+    <a-entity  gps-new-entity-place="latitude: 38.793901694888; longitude:-9.420741511464776" position="0 10 0" >
+        <a-gltf-model id="box21" onclick="startQuiz('box21');" class="clickable"  rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#questionyellow"></a-gltf-model>
+	</a-entity>
+    <a-entity  gps-new-entity-place="latitude: 38.793100375113; longitude:-9.41937494502468" position="0 10 0" >
+        <a-gltf-model id="box31" onclick="startQuiz('box31');" class="clickable"  rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#questiongreen"></a-gltf-model>
+	</a-entity>
+    <a-entity   gps-new-entity-place="latitude: 38.792865927055; longitude:-9.420867148993217" position="0 10 0" >
+        <a-gltf-model id="box41" onclick="startQuiz('box41');" class="clickable"  rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#questionred"></a-gltf-model>
+	</a-entity>
+	
+	
+
+    <a-entity  gps-new-entity-place="latitude: 38.73311408496159; longitude:-9.160117994690946" position="0 10 0" >
+        <a-gltf-model id="box12" onclick="startQuiz('box12');" class="clickable"  rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#questionblue"></a-gltf-model>
+	</a-entity>
+    <a-entity  gps-new-entity-place="latitude: 38.733032447576576; longitude:-9.160476309451754" position="0 10 0" >
+        <a-gltf-model id="box22" onclick="startQuiz('box22');" class="clickable"  rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#questionyellow"></a-gltf-model>
+	</a-entity>
+	
+
+    <a-entity  gps-new-entity-place="latitude: 38.73688892437477; longitude:-9.231943475054154" position="0 10 0" >
+        <a-gltf-model id="box13" onclick="startQuiz('box13');" class="clickable"  rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#questionblue"></a-gltf-model>
+	</a-entity>
+    <a-entity  gps-new-entity-place="latitude: 38.73669836995069; longitude:-9.231441777654902" position="0 10 0" >
+        <a-gltf-model id="box23" onclick="startQuiz('box23');" class="clickable"  rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#questionyellow"></a-gltf-model>
+	</a-entity>
+	
+    <a-entity  gps-new-entity-place="latitude: 38.66145405943452; longitude:-8.985904733546167" position="0 10 0" >
+        <a-gltf-model id="box23" onclick="startQuiz('box23');" class="clickable"  rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#questiongreen"></a-gltf-model>
+	</a-entity>
+	
+	
+	
+</a-scene>
+
+
+</body>
+</html>
